@@ -1,16 +1,19 @@
-/* 基本設定 */
+/*基本設定*/
 body {
     font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     background: #f0f2f5;
     color: #343a40;
     line-height: 1.6;
+    /*行間*/
+    padding-top: 60px;
+    /*ナビバーの文の余白*/
 }
 
-/* ヘッダー */
+
+/*ヘッダー*/
 header {
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
 }
 
@@ -18,34 +21,44 @@ header img {
     width: 100%;
     max-height: 350px;
     object-fit: cover;
+    /*枠内に収める*/
     display: block;
 }
 
 header h1 {
     background: #0056b3;
-    color: #fff;
+    color: #ffffff;
     margin: 0;
+    /*上下の余白*/
     padding: 1.2rem 1rem;
+    /*内側の余白*/
     font-size: 2.5rem;
+    /*文字の大きさ*/
     font-weight: 700;
+    /*太字*/
     letter-spacing: 1px;
+    /*文字同士の間隔*/
 }
 
-/* メインコンテンツ */
+/*メイン*/
 main {
     max-width: 960px;
     margin: 2.5rem auto;
-    background: #fff;
+    /*上下に2.5remの余白、左右は中央*/
+    background: #ffffff;
     padding: 2.5rem;
     border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /*角に丸みをつける*/
 }
 
-/* 各セクション */
+/*メイン内のセクション*/
 section {
     margin-bottom: 3rem;
+    /*下の間隔*/
     padding-bottom: 1.5rem;
+    /*内側の下の余白*/
     border-bottom: 1px solid #e9ecef;
+    /*下線を表現！*/
 }
 
 section img {
@@ -53,49 +66,61 @@ section img {
     margin: 0 auto;
 }
 
-section:last-of-type {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
 section h2 {
     color: #0056b3;
     border-left: 8px solid #007bff;
+    /*左側のボーダー*/
     padding-left: 1rem;
     margin-bottom: 1.5rem;
+    /*下の間隔*/
     font-size: 2rem;
     font-weight: 600;
 }
 
+section h3 {
+    color: #000000;
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    font-weight: 550;
+}
+
+/*テーブル*/
 .schedule-table {
     width: 75%;
-    border-collapse: collapse; /* セルの線を重ねてキレイに見せる */
+    /*全体の75%(=画面いっぱいにしない)*/
+    border-collapse: collapse;
+    /*枠線を重ねてキレイにする*/
     margin: 2rem auto;
     font-size: 1rem;
-    border: 2px solid #ccc; /* テーブル全体に枠線 */
+    border: 2px solid #cccccc;
+    /*テーブル全体に枠線 */
 }
 
 .schedule-table thead th {
+    /*↑テーブルのヘッダー*/
     background-color: #f2f4f6;
     text-align: center;
     padding: 1rem;
     font-weight: 600;
-    border: 1px solid #ccc; /* 各セルにも枠線 */
+    border: 1px solid #cccccc;
+    /*枠線*/
 }
 
 .schedule-table tbody td {
+    /*テーブルの中身*/
     background-color: #f9fafb;
     text-align: center;
     padding: 1rem;
-    border: 1px solid #ccc; /* 各セルにも枠線 */
+    border: 1px solid #cccccc;
+    /*枠線*/
 }
 
 
 
-/* リスト */
+/*リスト*/
 ul {
     list-style: none;
+    /*最初の「・」を消す*/
     padding-left: 0;
 }
 
@@ -103,16 +128,19 @@ ul li {
     background-color: #f8f9fa;
     margin-bottom: 0.8rem;
     padding: 0.8rem 1rem;
+    /*内側の余白*/
     border-left: 4px solid #007bff;
+    /*左側のボーダー*/
     border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    /*角に丸みをつける*/
 }
 
 ul li strong {
+    /*学部名のような協調したい部分で使用*/
     color: #0056b3;
 }
 
-/* フッター */
+/*フッター(画面下の黒枠の部分)*/
 footer {
     text-align: center;
     padding: 1.5rem;
@@ -120,10 +148,9 @@ footer {
     color: #e9ecef;
     font-size: 0.95rem;
     margin-top: 3rem;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
 }
 
-/* テキスト強調 */
+/*テキスト強調*/
 .intro-text1 {
     font-size: 1.2rem;
     line-height: 1.8;
@@ -140,25 +167,30 @@ footer {
     margin-bottom: 0.5rem;
 }
 
-/* 申し込みボタン1 */
+/*申し込みボタン1*/
 .apply-button1 {
     display: inline-block;
+    /*横に並びつつ、幅・高さを指定*/
     background-color: #00bbff;
-    color: #fff;
+    color: #ffffff;
     padding: 12px 25px;
     text-decoration: none;
+    /*下線を消す*/
     border-radius: 5px;
     font-size: 1.1rem;
     margin-top: 1.5rem;
     transition: background-color 0.8s ease;
+    /*0.8秒かけて色が変化*/
 }
 
 .apply-button1:hover {
+    /*ホバー(カーソルを合わせる)と以下の変化が適用される*/
     transform: scale(1.3);
+    /*大きさが1.3倍に*/
     background-color: #0073ff;
 }
 
-/* 学部紹介ボタン */
+/*学部紹介ボタン*/
 .apply-button2,
 .apply-button3,
 .apply-button4 {
@@ -170,15 +202,12 @@ footer {
     font-size: 1.1rem;
     margin-top: 1.5rem;
     transition: background-color 0.3s ease;
+    /*0.3秒で色が変化*/
 }
 
 .apply-button2:hover {
     transform: scale(1.1);
     background-color: #75daff;
-}
-
-.apply-button3 {
-    background-color: #00ffc3;
 }
 
 .apply-button3:hover {
@@ -191,31 +220,43 @@ footer {
     background-color: #fee47b;
 }
 
-/* 学部リストを横並びにするためのスタイル */
+/*学部リストを横並びにするためのスタイル*/
 .faculty-list {
     display: flex;
+    /*横並び*/
     flex-wrap: wrap;
+    /*画面が狭くなると折り返す*/
     justify-content: space-around;
+    /*子要素を横方向に均等配置し、左右にも余白*/
     gap: 20px;
+    /*間を空ける*/
     padding: 0;
     list-style: none;
+    /*「・」を消す*/
     margin: 0;
 }
 
 .faculty-item {
     display: flex;
     flex-direction: column;
+    /*横に中央揃え*/
     align-items: center;
     justify-content: flex-start;
-    background-color: #f8f9fa;
-    border: 1px solid #e9ecef;
+    /*縦に関して、上につめていく*/
+    background-color: #e5e5e5;
+    border: 1px solid #e5e5e5;
+    /*枠線*/
     border-radius: 8px;
     padding: 1.5rem;
     flex: 1 1 calc(33% - 20px);
+    /*flex: (grow) (shrink) (basis)である*/
+    /*幅を全体の33%にし、横に3つ並べられるように*/
     max-width: calc(33% - 20px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    text-align: center; /* 修正済み: テキスト中央寄せ */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /*最大幅も同じく制限し、flexboxの崩れを防ぐ。*/
+    text-align: center;
+    transition: transform 0.3s ease,
+    box-shadow 0.3s ease;
+    /*影を付けることで動きをスムーズにみせる*/
     box-sizing: border-box;
 }
 
@@ -230,24 +271,129 @@ footer {
     display: block;
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
-    word-break: break-word;
 }
 
-/* レスポンシブ対応 */
+
+
+
+/*ナビゲーションバー*/
+.navbar {
+    width: 100%;
+    background-color: #0056b3;
+    color: #fff;
+    position: fixed;
+    /* ページ最上部に固定 */
+    top: 0;
+    left: 0;
+    /*ナビゲーションバーを固定*/
+    z-index: 9999;
+    /*画面の1番前(被らないように)*/
+}
+
+.navbar-container {
+    display: flex;
+    /*横並び*/
+    justify-content: space-between;
+    /*横並びにした要素を左右に配置*/
+    align-items: center;
+    /*(縦方向に)中央揃え*/
+    width: 100%;
+    margin-left: 1.5rem;
+    padding: 0.8rem 1rem;
+    /*上下に0.8rem、左右に1remの余白*/
+    box-sizing: border-box;
+}
+
+.navbar-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    white-space: nowrap;
+    /*改行を防ぐ*/
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+.navbar-title:hover {
+    /*ホバーしたら*/
+    color: #f6ff00;
+}
+
+
+/*レスポンシブ対応*/
 @media (max-width: 768px) {
+
+    /*もし、画面幅が768px以下になった場合*/
     .faculty-item {
         flex: 1 1 calc(50% - 20px);
+        /*要素を半分にする*/
         max-width: calc(50% - 20px);
+        /*要素を半分にする*/
     }
 }
 
 @media (max-width: 480px) {
+
+    /*もし、画面幅が480px以下になった場合(=スマホ)*/
     .faculty-item {
         flex: 1 1 100%;
+        /*親要素を横いっぱいに*/
         max-width: 100%;
     }
+
     .faculty-list {
         flex-direction: column;
+        /*縦表示*/
         align-items: center;
+    }
+}
+
+/*JavaScript*/
+#welcome-message {
+    display: none;
+    /*最初は何もない*/
+    position: fixed;
+    /*固定*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*中央揃え*/
+    font-size: 6rem;
+    color: #ff0000;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    z-index: 9999;
+    /*画面の一番前にでるように(下に被らないように)*/
+    text-align: center;
+}
+
+#welcome-message span {
+    display: inline-block;
+    opacity: 0;
+    /*最初は透明*/
+    transform: translateX(0);
+    /*x方向に動かない*/
+}
+
+@keyframes appearAndSlide {
+    0% {
+        /*0秒*/
+        opacity: 0;
+        transform: translateX(-30px);
+        /*左からフェードイン*/
+    }
+
+    30% {
+        /*1500ミリ秒*/
+        opacity: 1;
+        transform: translateX(0);
+        /*中央に到達*/
+    }
+
+    100% {
+        /*5000ミリ秒*/
+        opacity: 0;
+        transform: translateX(50px);
+        /*右にフェードアウト*/
     }
 }

@@ -1,16 +1,17 @@
-/* 基本設定 */
+/*基本設定*/
 body {
     font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     background: #f0f2f5;
     color: #343a40;
     line-height: 1.6;
+    padding-top: 60px;
+    /*ナビバーの文の余白*/
 }
 
-/* ヘッダー */
+/*ヘッダー*/
 header {
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
 }
 
@@ -18,12 +19,28 @@ header img {
     width: 100%;
     max-height: 250px;
     object-fit: cover;
+    /*枠内に収める*/
     display: block;
 }
 
 header h1 {
     background: #0056b3;
-    color: #fff;
+    color: #ffffff;
+    margin: 0;
+    /*上下の余白*/
+    padding: 1.2rem 1rem;
+    /*内側の余白*/
+    font-size: 2.5rem;
+    /*文字の大きさ*/
+    font-weight: 700;
+    /*太字*/
+    letter-spacing: 1px;
+    /*文字同士の間隔*/
+}
+
+header h2 {
+    background: #52b000;
+    color: #ffffff;
     margin: 0;
     padding: 1.2rem 1rem;
     font-size: 2.5rem;
@@ -31,59 +48,85 @@ header h1 {
     letter-spacing: 1px;
 }
 
-/* メインコンテンツ */
+header h3 {
+    background: #ff9500;
+    color: #ffffff;
+    margin: 0;
+    padding: 1.2rem 1rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/*メインコンテンツ*/
 main {
     max-width: 960px;
     margin: 2.5rem auto;
+    /*上下に2.5remの余白、左右は中央*/
     background: #fff;
     padding: 2.5rem;
     border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /*角に丸みをつける*/
 }
 
-/* 各セクション */
+/*メイン内のセクション*/
 section {
     margin-bottom: 3rem;
+    /*下の間隔*/
     padding-bottom: 1.5rem;
+    /*内側の下の余白*/
     border-bottom: 1px solid #e9ecef;
+    /*下線を表現！*/
 }
 
 section img {
     display: block;
     margin: 0 auto;
     margin-bottom: 0.05rem;
+    /*下に余白*/
 }
 
-section:last-of-type {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
+section h1 {
+    color: #0056b3;
+    /*見出しの文字色*/
+    border-left: 8px solid #75daff;
+    /*左側のボーダー*/
+    padding-left: 1rem;
+    /*ボーダーと文字の間の余白*/
+    margin-bottom: 1.5rem;
+    /*見出しの下の余白*/
+    font-size: 2rem;
+    font-weight: 600;
 }
+
 
 section h2 {
-    color: #0056b3;/*見出しの文字色*/
-    border-left: 8px solid #75daff;/*左側のボーダー*/
-    padding-left: 1rem;/*ボーダーと文字の間の余白*/
-    margin-bottom: 1.5rem;/*見出しの下の余白*/
-    font-size: 2rem;/**/
-    font-weight: 600;/**/
+    color: #52b000;
+    /*見出しの文字色*/
+    border-left: 8px solid rgb(128, 255, 0);
+    /*左側のボーダー*/
+    padding-left: 1rem;
+    /*ボーダーと文字の間の余白*/
+    margin-bottom: 1.5rem;
+    /*見出しの下の余白*/
+    font-size: 2rem;
+    font-weight: 600;
 }
 
 section h3 {
-    color: #0056b3;
-    border-left: 8px solid #75daff;
+    color: #ff9500;
+    border-left: 8px solid #fee47b;
     padding-left: 1rem;
     margin-bottom: 1rem;
     font-size: 2rem;
     font-weight: 600;
-    text-align: center;
 }
 
-
-
-/* リスト */
+/*リスト*/
 ul {
     list-style: none;
+    /*最初の「・」を消す*/
     padding-left: 0;
 }
 
@@ -91,16 +134,20 @@ ul li {
     background-color: #f8f9fa;
     margin-bottom: 0.8rem;
     padding: 0.8rem 1rem;
+    /*内側の余白*/
     border-left: 4px solid #007bff;
+    /*左側のボーダー*/
     border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    /*角に丸みをつける*/
 }
 
+
 ul li strong {
+    /*アドミッションポリシーのような協調したい部分で使用*/
     color: #0056b3;
 }
 
-/* フッター */
+/*フッター(画面下の黒枠の部分)*/
 footer {
     text-align: center;
     padding: 1.5rem;
@@ -108,7 +155,6 @@ footer {
     color: #e9ecef;
     font-size: 0.95rem;
     margin-top: 3rem;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
 }
 
 /* テキスト強調 */
@@ -120,122 +166,129 @@ footer {
     margin-bottom: 0.5rem;
 }
 
-.intro-text2 {
-    font-size: 1.5rem;
-    line-height: 1.8;
-    font-weight: 500;
-    color: #495057;
-    margin-bottom: 0.5rem;
-}
 
-/* 申し込みボタン1 */
-.apply-button1 {
-    display: inline-block;
-    background-color: #00bbff;
-    color: #fff;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    margin-top: 1.5rem;
-    transition: background-color 0.8s ease;
-}
-
-.apply-button1:hover {
-    transform: scale(1.3);
-    background-color: #0073ff;
-}
-
-/* 学部紹介ボタン */
-.apply-button2,
-.apply-button3,
-.apply-button4 {
-    display: inline-block;
-    color: #000000;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    margin-top: 1.5rem;
-    transition: background-color 0.3s ease;
-}
-
-.apply-button2:hover {
-    transform: scale(1.1);
-    background-color: #75daff;
-}
-
-.apply-button3 {
-    background-color: #00ffc3;
-}
-
-.apply-button3:hover {
-    transform: scale(1.1);
-    background-color: #00ffc3;
-}
-
-.apply-button4:hover {
-    transform: scale(1.1);
-    background-color: #fee47b;
-}
 
 /* 学部リストを横並びにするためのスタイル */
 .faculty-list {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    /*横並び*/
+    flex-direction: column;
+    /* 要素を縦に並べる */
+    align-items: center;
+    /* 中央寄せ */
     gap: 20px;
+    /* 各カード間の隙間 */
     padding: 0;
-    list-style: none;
     margin: 0;
 }
 
 .faculty-item {
     display: flex;
     flex-direction: column;
+    /*横に中央揃え*/
     align-items: center;
     justify-content: flex-start;
-    background-color: #f8f9fa;
-    border: 1px solid #e9ecef;
+    /*縦に関して、上につめていく*/
+    background-color: #e5e5e5;
+    border: 1px solid #e5e5e5;
+    /*枠線*/
     border-radius: 8px;
     padding: 1.5rem;
-    flex: 1 1 calc(33% - 20px);
-    max-width: calc(33% - 20px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    text-align: center; /* 修正済み: テキスト中央寄せ */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 80%;
+    /* 親要素いっぱいに広がる */
+    max-width: none;
+    /* カードの最大幅を制限して見栄えを良くする */
+    text-align: center;
+    transition: transform 0.3s ease, 
+    box-shadow 0.3s ease;
+    /*影を付けることで動きをスムーズにみせる*/
     box-sizing: border-box;
+    margin-bottom: 20px;
+    /* 各カードの下に余白 */
 }
 
 .faculty-item img {
-    width: 100%;
-    height: auto;
+    width: 60%;
+    height: 60%;
     border-radius: 5px;
     margin-bottom: 1rem;
 }
 
 .faculty-item strong {
     display: block;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
     word-break: break-word;
+    text-align: center;
 }
 
-/* レスポンシブ対応 */
+/*ナビゲーションバー*/
+.navbar {
+    width: 100%;
+    background-color: #0056b3;
+    color: #fff;
+    position: fixed;
+    /* ページ最上部に固定 */
+    top: 0;
+    left: 0;
+    /*ナビゲーションバーを固定*/
+    z-index: 9999;
+    /*画面の1番前(被らないように)*/
+}
+
+.navbar-container {
+    display: flex;
+    /*横並び*/
+    justify-content: space-between;
+    /*横並びにした要素を左右に配置*/
+    align-items: center;
+    /*(縦方向に)中央揃え*/
+    width: 100%;
+    margin-left: 1.5rem;
+    padding: 0.8rem 1rem;
+    /*上下に0.8rem、左右に1remの余白*/
+    box-sizing: border-box;
+}
+
+.navbar-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    white-space: nowrap;
+    /*改行を防ぐ*/
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+.navbar-title:hover {
+    /*ホバーしたら*/
+    color: #f6ff00;
+}
+
+/*レスポンシブ対応*/
 @media (max-width: 768px) {
+
+    /*もし、画面幅が768px以下になった場合*/
     .faculty-item {
         flex: 1 1 calc(50% - 20px);
+        /*要素を半分にする*/
         max-width: calc(50% - 20px);
+        /*要素を半分にする*/
     }
 }
 
 @media (max-width: 480px) {
+
+    /*もし、画面幅が480px以下になった場合(=スマホ)*/
     .faculty-item {
         flex: 1 1 100%;
+        /*親要素を横いっぱいに*/
         max-width: 100%;
     }
+
     .faculty-list {
         flex-direction: column;
+        /*縦表示*/
         align-items: center;
     }
 }
